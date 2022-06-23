@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/favicon2.ico">
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/adaptive.css" />
+    <script src="https://kit.fontawesome.com/2631495305.js" crossorigin="anonymous"></script>
     <title>Resource</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header __animation-item">
       <div class="container">
         <nav class="nav">
           <ul class="nav__list">
@@ -25,9 +27,17 @@
             <img class="logo__img" src="./img/logo.svg" alt="logo" />
           </div>
 
-          <form class="search">
-            <input type="text" placeholder="Search website..." />
-            <button type="submit" class="search__btn">Search</button>
+          <form class="search-box">
+            <input class="search-box__input" type="text" placeholder="Search website..." />
+
+            <div class="search-box__btn-wrapper">
+              <i class="fas fa-search"></i>
+            </div>
+
+            <div class="search-box__btn-wrapper__cancel">
+              <i class="fas fa-times"></i>
+            </div>
+
           </form>
         </nav>
       </div>
@@ -60,17 +70,17 @@
       <section class="title-screen">
         <div class="container">
           <div class="title-screen__description">
-            <h1 class="description__heading">
+            <h1 class="description__heading __animation-item">
               The <b class="green-underline">most complete</b> Photography
               resource.
             </h1>
-            <p class="description__text">
+            <p class="description__text __animation-item">
               Welcome at Template Resource. This template is packed with useful
               features to built out your own resource website.
             </p>
           </div>
 
-          <div class="title-screen__buttons">
+          <div class="title-screen__buttons __animation-item">
             <a class="buttons__colored-btn"
               >Visit our Blog <small>Stories, News & info</small></a
             >
@@ -94,7 +104,7 @@
               <li class="information__list-item">Get Full Access Today!</li>
             </ul>
           </div>
-          <div class="meet-team__wrapper">
+          <div class="meet-team__wrapper __animation-item __hidden-anim">
             <div class="meet-team">
               <div class="meet-team__inf">
                 <h3 class="meet-team__inf-title">Meet our Writers</h3>
@@ -118,10 +128,11 @@
         <div class="container">
           <h2 class="blog__title">Recently in our Photography <a href="#">Blog</a></h2>
           <div class="blog__photos">
-            <div class="photos__left">
-              <div class="left__wrapper-img">
-                <img src="./img/Frame.jpg" alt=""/>
-              </div>
+            <div class="photos__left __animation-item">
+                <picture  class="left__wrapper-img">
+                  <source type="image/webp" srcset="./img/Frame.webp">
+                  <img src="./img/Frame.jpg" alt=""/>
+                </picture>
 
               <div class="left__post">
                 <div class="left__post-description">
@@ -146,10 +157,18 @@
 
             <div class="photos__right">
               <div class="right__first-post">
-                <img src="./img/blog-right1.jpg" alt=""/>
+                <picture>
+                  <source type="image/webp" srcset="./img/blog-right1.webp">
+                  <img src="./img/blog-right1.jpg" alt=""/>
+                </picture>
+
               </div>
               <div class="right__second-post">
-                <img class="second-post__img" src="./img/blog-right2.jpg" alt=""/>
+                <picture>
+                  <source type="image/webp" srcset="./img/blog-right2.webp">
+                  <img class="second-post__img" src="./img/blog-right2.jpg" alt=""/>
+                </picture>
+
                 <div class="second-post__info">
                   <time class="second-post__date">Sep 13, 2019</time>
                   <p class="second-post__title">
@@ -179,8 +198,7 @@
       <section class="next-lvl">
         <div class="next-lvl__bg">
           <div class="container position-abs">
-            <div class="next-lvl__img-wrapper">
-              <div class="next-lvl__img"></div>
+            <div class="next-lvl__wrapper-info">
 
               <div class="next-lvl__info">
                 <h2 class="next-lvl__title">
@@ -212,9 +230,9 @@
             </div>
 
 
-            <section  id="subscriptions">
+            <div  id="subscriptions">
               <h2 class="subscr__title">Get full accesses. Today</h2>
-              <div class="acceses">
+              <div class="acceses __animation-item __hidden-anim">
                 <div class="access">
                   <div class="access__name">1 Month Access</div>
                   <div class="access__price">$49 <small>/month</small></div>
@@ -307,8 +325,7 @@
                   </p>
                   <p class="subscr__notice-desc">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse varius enim in eros elementum tristique. Duis
-                    cursus, mi quis viverra ornare.
+                    Suspendisse varius enim in eros elementum tristique.
                   </p>
                 </div>
 
@@ -319,21 +336,23 @@
                   >Learn more</a
                 >
               </div>
-            </section>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="types">
-        <!-- <div class="container position-rel types-flex"> -->
-        <div class="types__review-wrapper">
+        <div class="types__review-wrapper __animation-item">
           <h2 class="types__review-header">
             What <b class="green-underline">other</b> say.
           </h2>
+          <picture class="types__review-picture __animation-item">
+            <source type="image/webp" srcset="./img/review.webp">
+            <img class="review__photo" src="./img/review.jpg" alt=""/>
+          </picture>
 
-          <img class="review__photo" src="./img/review.jpg" alt=""/>
 
-          <div class="types__review">
+          <div class="types__review __animation-item">
             <q class="review-quoter"
               >I learned so much, even as a professional</q
             >
@@ -414,12 +433,12 @@
           <p class="resources__header-inf">The most complete Photography resource.</p>
           <h2 class="resources__header">Search our Resources:</h2>
 
-          <form class="search resources-search">
+          <form class="resources-search">
             <input type="text" placeholder="Search website..." />
-            <button type="submit" class="search__btn">Search</button>
+            <button type="submit" class="resources-search__btn">Search</button>
           </form>
 
-          <div class="resources__example-wrapper">
+          <div class="resources__example-wrapper  __animation-item">
 
           <div class="resources__example">
             <div class="resourse__example-top">
@@ -556,6 +575,7 @@
 
       </div>
     </footer>
+
 
     <script src="./script.js"></script>
   </body>

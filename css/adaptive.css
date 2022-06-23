@@ -1,4 +1,4 @@
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 950px) {
   body.__lock {
     overflow: hidden;
   }
@@ -8,12 +8,17 @@
   }
 
   .header-adaptive {
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
     width: 100%;
-    background-color: #425460;
+    transition: all 0.6s ease-out;
+  }
+
+  .mob-header__anim {
+    background-color: #252062;
     box-shadow: 0 0 30px 5px #00000091;
   }
 
@@ -30,11 +35,19 @@
   .header-adaptive__logo {
     display: block;
     position: relative;
-    width: 55px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     background-image: url(../img/logo-adaptive.svg);
     background-repeat: no-repeat;
     z-index: 15;
+    background-size: 100%;
+    transition: 0.4s;
+    filter: brightness(0.1);
+  }
+
+  .header-adaptive__logo.__active,
+  .header-adaptive.mob-header__anim .header-adaptive__logo {
+    filter: brightness(1);
   }
 
   .header-adaptive__icon {
@@ -53,8 +66,17 @@
     left: 0;
     width: 100%;
     height: 10%;
-    background-color: #fff;
+    background-color: rgb(0, 0, 0);
     transition: 0.5s ease;
+  }
+
+  .header-adaptive__icon.__active span,
+  .header-adaptive__icon.__active::before,
+  .header-adaptive__icon.__active::after,
+  .header-adaptive.mob-header__anim .header-adaptive__icon > span,
+  .header-adaptive.mob-header__anim .header-adaptive__icon::before,
+  .header-adaptive.mob-header__anim .header-adaptive__icon::after {
+    background-color: rgb(255, 255, 255);
   }
 
   .header-adaptive__icon::before,
@@ -98,7 +120,7 @@
     width: 100%;
     height: 100%;
     padding: 100px 30px 30px 30px;
-    background-color: #161333f7;
+    background-color: #181542;
     transition: right 0.4s ease 0s;
     overflow: auto;
   }
@@ -114,8 +136,11 @@
     left: 0;
     width: 100%;
     height: 74px;
-    background-color: #252062;
     z-index: 14;
+  }
+
+  .header-adaptive.mob-header__anim .nav-adaptive::before {
+    /* background-color: #252062; */
   }
 
   .nav__list {
@@ -131,6 +156,7 @@
   }
 
   .nav__list-link {
+    padding-left: 0;
     font-size: 2rem;
     color: #fff;
   }
@@ -138,20 +164,22 @@
 
   .title-screen {
     background-image: url(../img/title-mob.jpg);
+    padding: 180px 0 170px;
+    height: auto;
   }
 
   .title-screen__description {
-    padding: 185px 0 85px 0;
+    padding-bottom: 80px;
   }
 
-  /* ---- */
+  /* blog */
 
   #blog {
-    padding: 0;
+    padding: 90px 0 0;
   }
 
   .blog__title {
-    padding-bottom: 55px;
+    padding-bottom: 50px;
     font-size: 2.8rem;
   }
 
@@ -202,7 +230,7 @@
 
   /* HELP SECTION */
   .help {
-    padding: 90px 0 110px;
+    padding: 80px 0 0;
   }
 
   .help > .container {
@@ -232,7 +260,7 @@
   }
 
   .next-lvl__bg {
-    min-height: 840px;
+    min-height: 1300px;
   }
 
   .position-abs {
@@ -242,12 +270,12 @@
     transform: none;
   }
 
-  .next-lvl__img-wrapper {
+  .next-lvl__wrapper-info {
     display: none;
   }
 
   #subscriptions {
-    margin-top: 90px;
+    padding-top: 90px;
   }
 
   .subscr__title {
@@ -290,6 +318,10 @@
   }
 
   /* RESOURCES  */
+  #resources {
+    padding: 80px 0;
+  }
+
   .resources__example-wrapper {
     flex-wrap: wrap;
   }
@@ -326,16 +358,6 @@
   }
 }
 
-@media screen and (max-width: 951px) {
-  .title-screen {
-    background-position-x: left;
-  }
-
-  .next-lvl__bg {
-    min-height: 1130px;
-  }
-}
-
 @media screen and (max-width: 790px) {
   .photos__right div:not(:last-child) {
     margin: 0 0 20px 0;
@@ -360,14 +382,22 @@
     padding: 0 10px;
   }
   /* title */
+  .title-screen {
+    padding: 160px 0 130px;
+  }
+
   .title-screen__description {
-    padding: 170px 0 70px 0;
+    padding-bottom: 70px;
   }
 
   .title-screen__buttons {
     align-items: stretch;
-    padding-bottom: 130px;
     font-size: 0.9rem;
+  }
+
+  .buttons__colored-btn > small,
+  .buttons__colorless-btn > small {
+    display: block;
   }
 
   .description__heading {
@@ -407,7 +437,7 @@
 
   /*  */
   .next-lvl__bg {
-    min-height: 1500px;
+    min-height: 1650px;
   }
 
   .access {
@@ -424,7 +454,7 @@
   }
 
   .subscr__notice-title {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .subscr__notice {
@@ -456,13 +486,25 @@
   }
 }
 
-@media screen and (max-width: 395px) {
+@media screen and (max-width: 415px) {
+  .header-adaptive__container {
+    min-height: 60px;
+  }
+
+  .header-adaptive__logo {
+    height: 42px;
+  }
+
   .header-adaptive__icon {
     width: 43px;
   }
 
+  .title-screen {
+    padding: 155px 0 110px;
+  }
+
   .title-screen__description {
-    padding: 155px 0 65px 0;
+    padding-bottom: 65px;
   }
 
   .description__heading {
@@ -478,7 +520,16 @@
   .buttons__colorless-btn {
     padding: 8px 10px;
   }
-  /* --help--- */
+
+  .buttons__colored-btn > small,
+  .buttons__colorless-btn > small {
+    display: none;
+  }
+
+  .help {
+    padding: 70px 0 0;
+  }
+
   .information__title {
     margin-right: 40px;
     max-width: 120px;
@@ -486,6 +537,8 @@
 
   .meet-team__wrapper {
     min-height: 225px;
+    padding: 35px 35px;
+    background: #252062;
   }
 
   .meet-team__squad-photo {
@@ -495,10 +548,10 @@
   .meet-team__squad .small-btn {
     position: static;
   }
-  /* --blog-- */
+
   .blog__title {
-    padding-bottom: 40px;
-    font-size: 2.4rem;
+    padding-bottom: 35px;
+    font-size: 2.2rem;
   }
 
   .left__post {
@@ -513,9 +566,10 @@
   .left__post-info {
     margin-left: 0;
   }
+
   .left__post-description > h3 {
-    padding: 12px 0;
-    font-size: 1.3rem;
+    padding: 9px 0;
+    font-size: 1.1rem;
   }
 
   .post-writer__name,
@@ -541,19 +595,29 @@
     background-image: none;
   }
 
+  .next-lvl__bg {
+    min-height: 1560px;
+  }
+
   /* sub */
   #subscriptions {
-    margin-top: 70px;
+    padding-top: 65px;
   }
 
   .subscr__title {
-    margin-bottom: 45px;
+    margin-bottom: 35px;
     font-size: 2.1rem;
+  }
+
+  .access {
+    margin: 15px auto;
+    padding: 30px 25px;
   }
 
   /* request */
   .types__review-wrapper {
     padding: 30px 10px;
+    margin: 35px auto 10px;
   }
 
   .review__photo {
@@ -576,10 +640,13 @@
     padding: 50px 25px 35px;
   }
 
-  .resources-search > button {
+  .resources-search__btn {
     padding: 12px 30px;
   }
-  /* footer */
+
+  #resources {
+    padding: 70px 0;
+  }
 
   .footer > .container {
     padding: 0px 30px;
