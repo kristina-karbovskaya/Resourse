@@ -488,15 +488,16 @@
 
 @media screen and (max-width: 415px) {
   .header-adaptive__container {
-    min-height: 60px;
+    min-height: 58px;
   }
 
   .header-adaptive__logo {
-    height: 42px;
+    height: 40px;
+    width: 40px;
   }
 
   .header-adaptive__icon {
-    width: 43px;
+    width: 36px;
   }
 
   .title-screen {
@@ -537,8 +538,16 @@
 
   .meet-team__wrapper {
     min-height: 225px;
-    padding: 35px 35px;
-    background: #252062;
+    padding: 30px 25px;
+  }
+
+  .meet-team__inf-title {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+  }
+
+  .meet-team__inf-description {
+    font-size: 0.8rem;
   }
 
   .meet-team__squad-photo {
@@ -612,12 +621,26 @@
   .access {
     margin: 15px auto;
     padding: 30px 25px;
+    max-width: 255px;
+  }
+
+  .access__btn {
+    margin: 15px 0;
+  }
+
+  .subscr__notice-desc {
+    font-size: 0.65rem;
   }
 
   /* request */
   .types__review-wrapper {
-    padding: 30px 10px;
-    margin: 35px auto 10px;
+    padding: 30px 15px;
+    margin: 25px auto 15px;
+  }
+
+  .types__review-header {
+    margin-bottom: 30px;
+    font-size: 1.6rem;
   }
 
   .review__photo {
@@ -625,9 +648,13 @@
   }
 
   .types__review {
-    top: 220px;
+    top: 200px;
     padding: 10px;
-    max-width: 210px;
+    max-width: 205px;
+  }
+
+  .review-text {
+    margin: 10px auto;
   }
 
   .types-btn {
@@ -637,11 +664,15 @@
   }
 
   .types__kind-of-photographer {
-    padding: 50px 25px 35px;
+    padding: 45px 25px 35px;
   }
 
   .resources-search__btn {
     padding: 12px 30px;
+  }
+
+  .kind-of-photographer__header {
+    font-size: 1.4rem;
   }
 
   #resources {
@@ -659,5 +690,9 @@
 
   .footer__item {
     margin: 0 0 20px;
+  }
+
+  .footer {
+    padding: 60px 0 30px;
   }
 }

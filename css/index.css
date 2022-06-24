@@ -336,13 +336,18 @@ main {
   color: #2bca8b;
 }
 
-.information__list-item {
+.information__list-item > a {
   color: #252061;
   font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.information__list-item > a:hover {
+  color: #f55f39;
 }
 
 .information__list-item:not(:last-child) {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .meet-team__wrapper {
@@ -672,7 +677,7 @@ main {
   padding: 40px;
   background-color: rgba(255, 255, 255, 0.9);
   opacity: 0;
-  transform: translate(0, 100%);
+  transform: translate(0, 100%) scale(1);
   transition: all 0.3s ease 0s;
 }
 
@@ -703,7 +708,7 @@ main {
 
 .access__btn {
   margin: 23px 0;
-  padding: 12px 25px;
+  padding: 12px 20px;
   background-color: #2bca8b;
   color: #fff;
   outline: none;
@@ -715,11 +720,6 @@ main {
 .access__notice {
   font-size: 0.65rem;
   color: #9da0ac;
-}
-
-.access:hover {
-  padding: 58px 40px;
-  background-color: rgb(255, 255, 255);
 }
 
 .access__btn:hover {
@@ -869,7 +869,7 @@ main {
 .accorgion-item__title {
   display: block;
   position: relative;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
   font-size: 1.2rem;
   color: #524b9a;
   cursor: pointer;
@@ -1034,6 +1034,11 @@ main {
 .resources__example-wrapper.scroll .resources__example {
   transform: translate(0, 0);
   opacity: 1;
+}
+
+.acceses.scroll .access:hover {
+  transform: scale(1.05);
+  background-color: rgb(255, 255, 255);
 }
 
 .resourse__example-top {
